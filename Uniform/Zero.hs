@@ -12,16 +12,16 @@
 {-# OPTIONS -fno-warn-missing-signatures #-}
 
 
-module Uniform.Zero (Zeros (..)
-        , Text, pair, cross
-        ,  fst3, snd3, thd3
-        , first, second
+module Uniform.Zero (module Uniform.Zero
+        --     Zeros (..)
+        -- , Text, pair, cross
+        -- ,  fst3, snd3, thd3
+        -- , first, second
 --            , htf_thisModulesTests
 ) where
 
 
 import Data.Text (Text)
-import Data.Tuple.Utils (fst3, snd3, thd3)
 
 
 
@@ -34,11 +34,6 @@ class Zeros z where
     zero = (error   "Zeros for this type not instantiated")
     -- gives a difficult to track error, because the type is not known
 
-pair f (a,b) = (f a, f b)
-cross (f,g) (a,b) = (f a, g b)
-
-first f (a,b) = (f a, b)
-second f (a,b) = (a, f b)
 
 
 
@@ -66,4 +61,3 @@ instance Zeros Text where zero = (""::Text)
 --instance (Eq x) => Zeros x where
 --    zero = (undefined $ "Zeros for this type not instantiated")
 -- unsafe overlap -- when defined in other modules
-

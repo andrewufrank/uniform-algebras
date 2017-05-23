@@ -25,6 +25,7 @@ library
         , text
     exposed-modules:
         Uniform.Zero
+        Uniform.Pointless
 
     exposed: True
     buildable: True
