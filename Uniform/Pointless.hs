@@ -26,7 +26,7 @@
 
 
 module Uniform.Pointless (
-    module Uniform.Pointless     
+    module Uniform.Pointless
     , module Data.Tuple.Utils
 
         )  where
@@ -40,7 +40,7 @@ cross (f,g) (a,b) = (f a, g b)
 first f (a,b) = (f a, b)
 second f (a,b) = (a, f b)
 
--- move TODO algebras
-fst3 (a,b,c) = a
-snd3 (a,b,c) = b
-thd3 (a,b,c) = c
+-- -- move TODO algebras
+-- fst3 (a,b,c) = a
+-- snd3 (a,b,c) = b
+-- thd3 (a,b,c) = c
