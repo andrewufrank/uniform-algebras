@@ -54,6 +54,7 @@ instance (Zeros a, Zeros b, Zeros c, Zeros d, Zeros e)
      zero = (zero, zero, zero, zero, zero)
 
 instance Zeros Text where zero = (""::Text)
+instance Zeros (Maybe a) where zero = Nothing -- added
 
 --instance (Eq (g f), Zeros f, Applicative g) => Zeros (g f)
 --    where zero = pure zero

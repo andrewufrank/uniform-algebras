@@ -36,6 +36,7 @@ import Data.Tuple.Utils (fst3, snd3, thd3)
 
 pair f (a,b) = (f a, f b)
 cross (f,g) (a,b) = (f a, g b)
+swapPair (a,b) = (b,a)
 
 first f (a,b) = (f a, b)
 second f (a,b) = (a, f b)
