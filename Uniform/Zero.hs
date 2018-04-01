@@ -1,4 +1,4 @@
---{-# OPTIONS_GHC -F -pgmF htfpp #-}
+----{-# OPTIONS_GHC -F -pgmF htfpp #-}
 {-# LANGUAGE
     FlexibleInstances
 --    , Safe
@@ -7,12 +7,15 @@
     , FlexibleContexts
 --        , UndecidableInstances
         , OverloadedStrings
+--        , DeriveDataTypeable
  #-}
 {-# OPTIONS -Wall #-}
-{-# OPTIONS -fno-warn-missing-signatures #-}
+--{-# OPTIONS -fno-warn-missing-signatures #-}
 
 
 module Uniform.Zero (module Uniform.Zero
+        , module Data.Maybe
+        , module Data.Either
         --     Zeros (..)
         -- , Text, pair, cross
         -- ,  fst3, snd3, thd3
@@ -22,16 +25,19 @@ module Uniform.Zero (module Uniform.Zero
 
 
 import Data.Text (Text)
+import Data.Maybe
+import Data.Either
+--import Data.Typeable
 
-
-
-class Zeros z where
+class  Zeros z where
     zero :: z
 
     isZero, notZero :: Eq z =>  z -> Bool
     isZero z = zero == z
     notZero = not.isZero
-    zero = (error   "Zeros for this type not instantiated")
+--    zero = error   ("Zeros for this type not instantiated ")
+--                ++ typeinfo)
+--            where typeinfo = show $ typeOf zero
     -- gives a difficult to track error, because the type is not known
 
 
