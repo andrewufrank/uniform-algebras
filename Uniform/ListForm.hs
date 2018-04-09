@@ -34,7 +34,7 @@ import Data.Either
 import Uniform.Zero
 import GHC.Generics
 
-class Zeros (LF l) => ListForms l   where
+class (Monoid l, Zeros (LF l)) => ListForms l   where
     type LF l
     prependOne  :: (LF l) -> l   -> l
     appendOne :: l   -> (LF l) -> l
@@ -43,6 +43,7 @@ class Zeros (LF l) => ListForms l   where
 
     prependOne a la = appendTwo  (mkOne a) la
     appendOne la a = appendTwo la (mkOne a)
+    appendTwo = (<>)
 
 --instance ListForms Text where   -- in strings
 --    type LF Text = Char
