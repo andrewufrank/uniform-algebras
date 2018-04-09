@@ -82,7 +82,7 @@ instance (Zeros a, Zeros b, Zeros c, Zeros d, Zeros e)
          => Zeros (a,b,c, d, e) where
      zero = (zero, zero, zero, zero, zero)
 
-instance Zeros Text where zero = (""::Text)
+--instance Zeros Text where zero = (""::Text)
 instance Zeros (Maybe a) where zero = Nothing
 
 --instance (Eq (g f), Zeros f, Applicative g) => Zeros (g f)

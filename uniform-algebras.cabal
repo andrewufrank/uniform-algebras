@@ -25,6 +25,7 @@ library
         , text
     exposed-modules:
         Uniform.Zero
+        Uniform.ListForm
         Uniform.Pointless
 
     exposed: True
