@@ -43,7 +43,7 @@ class (Monoid l, Zeros (LF l)) => ListForms l   where
 
     prependOne a la = appendTwo  (mkOne a) la
     appendOne la a = appendTwo la (mkOne a)
-    appendTwo = (<>)
+    appendTwo = error "not implemented appendTwo for ListForm (<>)"
 
 --instance ListForms Text where   -- in strings
 --    type LF Text = Char
