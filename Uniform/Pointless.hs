@@ -1,38 +1,26 @@
 ---------------------------------------------------------------------
 --
 -- Module      :  Uniform.Pointless
---
+--              collecting some of the operations used in 
+--              the book by 
+--              Bird \& deMoore \"The Algebra of Programming\"
 ----------------------------------------------------------------------
--- {-# OPTIONS_GHC -F -pgmF htfpp #-}
--- {-# LANGUAGE BangPatterns          #-}
---{-# LANGUAGE DeriveDataTypeable    #-}
 {-# LANGUAGE DoAndIfThenElse #-}
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
--- {-# LANGUAGE OverloadedStrings     #-}
--- {-# LANGUAGE PackageImports        #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE TypeFamilies #-}
--- {-# LANGUAGE TypeSynonymInstances  #-}
 {-# LANGUAGE UndecidableInstances #-}
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 {-# OPTIONS_GHC -fno-warn-unused-matches #-}
 {-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
 
--- runErrorT is depreceiated but used in monads-tf
--- {-# OPTIONS_GHC -w #-}
-
--- | the standard useful pointless operations
--- https://hackage.haskell.org/package/tuple could be useful
--- https://hackage.haskell.org/package/extra more useful stuff
 
 module Uniform.Pointless
   ( module Uniform.Pointless )
 where
 
--- import Data.Tuple.Utils (fst3, snd3, thd3, fst4, snd4, trd4, fth4
---             , fst5, snd5, trd5, fth5, ffh5)
 
 pair :: (t -> b) -> (t, t) -> (b, b)
 pair f (a, b) = (f a, f b)
