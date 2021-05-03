@@ -1,4 +1,4 @@
------------------------------------------------------------------------------
+---------------------------------------------------------------------
 --Main.hs
 -- Module      :  Main
 -- Copyright   :  andrew u frank 2016
@@ -6,7 +6,7 @@
 -- | test  the error modue
 --
 --
------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 {-# LANGUAGE
     MultiParamTypeClasses
     , TypeSynonymInstances
@@ -25,14 +25,14 @@ module Main (main) where
 
 --import qualified Data.Text as T (Text)
 --import Data.Strings
-import TestingAlgebras
-import Uniform.Zero
-import System.Exit
+-- import TestingAlgebras
+-- import Uniform.Zero
+-- import System.Exit
 --import Data.Easy
 
-programName = "error-0.0.8"
+programName = "algebras"
 
-debug_main  =  True
+debugMain  =  True
 
 putIOwords = putStrLn . unwords
 
