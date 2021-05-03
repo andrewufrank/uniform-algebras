@@ -4,19 +4,21 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6ca5161d33bcd3257d680b0bea2b40fb8b40e7e96864ad84a5d1981256c19eed
+-- hash: 93a76b8226219d8b11780a9a6e4267c54e1a9a4d5a80580d3e1f8585d6c48c41
 
 name:           uniform-algebras
 version:        0.0.10.0
-synopsis:       some simple algebras, eg. zero
+synopsis:       simplistic algebras, eg. zero
 description:    simple algebras without much mathematical underpinning
-                zero (not a semigroupoid...)
-                exports also Maybe and Either
+                  - zero with test isZero, notZero (not a semigroupoid)
+                      exports also Maybe and Either
+                  - pointless operations, e.g. tuples up to 4 or 5
+                  - ListForms (a monoid)
 category:       Algebra
 author:         Andrew Frank
-maintainer:     Andrew U. Frank <andrewufrank@gmail.com>
+maintainer:     Andrew U. Frank <frank@geoinfo.tuwien.ac.at>
 copyright:      2021 Andrew U. Frank
-license:        MIT
+license:        GPL
 build-type:     Simple
 extra-source-files:
     README.md

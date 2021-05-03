@@ -1,16 +1,19 @@
 name:         uniform-algebras
 version:      0.0.10.0
-license:      MIT
-maintainer:   Andrew U. Frank <andrewufrank@gmail.com>
+license:      GPL
+maintainer:   Andrew U. Frank <frank@geoinfo.tuwien.ac.at>
 author:       Andrew Frank
 copyright:    2021 Andrew U. Frank
 category:     Algebra
-synopsis:     some simple algebras, eg. zero
+synopsis:     simplistic algebras, eg. zero
 description: |
     simple algebras without much mathematical underpinning
-    zero (not a semigroupoid...)
-    exports also Maybe and Either
-# Please see the README on GitHub at <https://github.com/githubuser/primo#readme>
+      - zero with test isZero, notZero (not a semigroupoid)
+          exports also Maybe and Either
+      - pointless operations, e.g. tuples up to 4 or 5
+      - ListForms (a monoid)
+
+# Please see the README on GitHub at <https://github.com/andrewufrank/uniform-algebras/readme>
 
 # verbatim:
 #   cabal-version: 3.0
