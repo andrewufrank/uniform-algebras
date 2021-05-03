@@ -1,22 +1,24 @@
 name:         uniform-algebras
 version:      0.0.10.0
-license:      GPL
+license:      GPL-2.0-only
 maintainer:   Andrew U. Frank <frank@geoinfo.tuwien.ac.at>
+bug-reports:  https://github.com/andrewufrank/uniform-algebras/issues
 author:       Andrew Frank
 copyright:    2021 Andrew U. Frank
 category:     Algebra
-synopsis:     simplistic algebras, eg. zero
+synopsis:     pointless functions and a simplistic zero and monoid
 description: |
-    simple algebras without much mathematical underpinning
-      - zero with test isZero, notZero (not a semigroupoid)
+    simple algebras avoiding too much mathematical underpinning
+    - zero with test isZero, notZero (not a semigroupoid)
           exports also Maybe and Either
-      - pointless operations, e.g. tuples up to 4 or 5
-      - ListForms (a monoid)
+    - pointless operations, e.g. tuples up to 4 or 5    
+    - ListForms (a monoid)
 
 # Please see the README on GitHub at <https://github.com/andrewufrank/uniform-algebras/readme>
 
 # verbatim:
-#   cabal-version: 3.0
+#   cabal-version: 3.4
+# not supported for hackage
 
 extra-source-files:
 - README.md
@@ -28,6 +30,9 @@ dependencies:
 library:
   source-dirs: 
     - .
+  verbatim:
+    autogen-modules:
+        Paths_uniform_algebrasss
 
 # this is only a library, no directly executable
 

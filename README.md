@@ -1,7 +1,7 @@
  
 
 # The uniform-algebras package 
-It contains a few simplistic algebras, e.g.
+contains a few simplistic algebras, e.g.
 - a zero which is not even a semigroup to be widely usable as a generic "nothing"; it is attempted to allow automatic instantiation (under construction),
 - a ListForm class, which is a monoid and has generic operations to make and append to a list. 
 - a collection of operations for "pointless" code writing, especially tuples with 4 or 5 elements.
