@@ -4,7 +4,7 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 28cfb85a4659b9d0c4ece66b74ae41b37e4062572a1ebc5bde4f3698f08f7f8d
+-- hash: 9aceb150237b26e235527d4a09c80054ab32e8c7a2dff50957a800d3ee453136
 
 name:           uniform-algebras
 version:        0.0.10.0
@@ -30,7 +30,8 @@ library
       Uniform.ListForm
       Uniform.Pointless
       Uniform.Zero
-  autogen-modules: Paths_uniform_algebras
+  autogen-modules:
+      Paths_uniform_algebras
   other-modules:
       Paths_uniform_algebras
   hs-source-dirs:
@@ -38,3 +39,4 @@ library
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
+   

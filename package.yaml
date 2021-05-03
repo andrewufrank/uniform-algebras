@@ -32,7 +32,7 @@ library:
     - .
   verbatim:
     autogen-modules:
-        Paths_uniform_algebrasss
+        Paths_uniform_algebras
 
 # this is only a library, no directly executable
 
