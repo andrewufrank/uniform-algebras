@@ -1,26 +1,12 @@
 ---------------------------------------------------------------------
 --
 -- Module      :  Uniform.Pointless
---              collecting some of the operations used in 
---              the book by 
+--              collecting some of the operations used in
+--              the book by
 --              Bird \& deMoore \"The Algebra of Programming\"
 ----------------------------------------------------------------------
-{-# LANGUAGE DoAndIfThenElse #-}
-{-# LANGUAGE FlexibleContexts #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TypeFamilies #-}
-{-# LANGUAGE UndecidableInstances #-}
-{-# OPTIONS_GHC -Wno-missing-signatures #-}
-{-# OPTIONS_GHC -fno-warn-unused-matches #-}
-{-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
 
-
-module Uniform.Pointless
-  ( module Uniform.Pointless )
-where
-
+module Uniform.Pointless (module Uniform.Pointless) where
 
 pair :: (t -> b) -> (t, t) -> (b, b)
 pair f (a, b) = (f a, f b)

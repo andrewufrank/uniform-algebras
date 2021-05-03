@@ -1,20 +1,15 @@
 ---------------------------------------------------------------------
 ---Module      :   Zeros
--- a naive and simple data type 
--- usable to stand in for most kinds of nothing 
--- added Either and Maybe to import wherever needed
+--      a naive and simple data type
+--      usable to stand in for most kinds of nothing
+--      added Either and Maybe to import wherever needed
 --
 ----------------------------------------------------------------------
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DefaultSignatures #-}
+{-# LANGUAGE TypeOperators #-}
 
-{-# LANGUAGE
-    FlexibleInstances
-    , MultiParamTypeClasses
-    , TypeSynonymInstances
-    , FlexibleContexts
-    , OverloadedStrings
-    , DefaultSignatures
-    , TypeOperators
- #-}
 {-# OPTIONS -Wall #-}
 
 module Uniform.Zero
@@ -49,7 +44,6 @@ import Data.Maybe
     maybeToList,
   )
 import GHC.Generics
-  
 
 -- | a minimal algebraic type with nothing than an identity
 --  useful to identify a specific value in a type
@@ -82,6 +76,7 @@ instance Zeros Char where zero = ' '
 instance Zeros () where zero = ()
 
 instance Zeros Bool where zero = False
+
 -- is this contrary to the Unix tradition?
 
 instance Zeros Int where zero = 0
@@ -103,4 +98,3 @@ instance
   zero = (zero, zero, zero, zero, zero)
 
 instance Zeros (Maybe a) where zero = Nothing
- 

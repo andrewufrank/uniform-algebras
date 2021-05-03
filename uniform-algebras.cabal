@@ -4,7 +4,7 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 28cfb85a4659b9d0c4ece66b74ae41b37e4062572a1ebc5bde4f3698f08f7f8d
+-- hash: dd684d6ff0b2915d05c66d8fa47eb27983a96e080fc63c97d9e988e2406a64be
 
 name:           uniform-algebras
 version:        0.0.10.0
@@ -14,7 +14,9 @@ description:    simple algebras avoiding too much mathematical underpinning
                       exports also Maybe and Either
                 - pointless operations, e.g. tuples up to 4 or 5    
                 - ListForms (a monoid)
-category:       Algebra
+                .
+                Please see the README on GitHub at <https://github.com/andrewufrank/uniform-algebras/readme>
+category:       Algebra, Uniform
 bug-reports:    https://github.com/andrewufrank/uniform-algebras/issues
 author:         Andrew Frank
 maintainer:     Andrew U. Frank <frank@geoinfo.tuwien.ac.at>

@@ -4,28 +4,25 @@
 -- somewhat the minimum often used without much baggage
 --
 ----------------------------------------------------------------------
-{-# LANGUAGE FlexibleContexts      #-}
-{-# LANGUAGE FlexibleInstances     #-}
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE OverloadedStrings     #-}
-{-# LANGUAGE ScopedTypeVariables   #-}
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE TypeFamilies #-}
 
-{-# LANGUAGE TypeFamilies          #-}
 {-# OPTIONS -Wall #-}
 
-module Uniform.ListForm (module Uniform.ListForm
-) where
-
+module Uniform.ListForm
+  ( module Uniform.ListForm,
+  )
+where
 
 import Uniform.Zero
 
-class (Monoid l, Zeros (LF l)) => ListForms l   where
-    type LF l
-    prependOne  :: LF l -> l   -> l
-    appendOne :: l   -> LF l -> l
-    mkOne :: LF l -> l
-    appendTwo  :: l  -> l   -> l
+class (Monoid l, Zeros (LF l)) => ListForms l where
+  type LF l
+  prependOne :: LF l -> l -> l
+  appendOne :: l -> LF l -> l
+  mkOne :: LF l -> l
+  appendTwo :: l -> l -> l
 
-    prependOne a la = appendTwo  (mkOne a) la
-    appendOne la a = appendTwo la (mkOne a)
-    appendTwo = error "not implemented appendTwo for ListForm (<>)"
+  prependOne a la = appendTwo (mkOne a) la
+  appendOne la a = appendTwo la (mkOne a)
+  appendTwo = error "not implemented appendTwo for ListForm (<>)"
