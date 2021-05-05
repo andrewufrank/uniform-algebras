@@ -1,17 +1,20 @@
 name:         uniform-algebras
 version:      0.1.0
 license:      GPL-2.0-only
-maintainer:   Andrew U. Frank <frank@geoinfo.tuwien.ac.at>
+maintainer:   Andrew U. Frank <uniform@gerastree.at>
 bug-reports:  https://github.com/andrewufrank/uniform-algebras/issues
 author:       Andrew Frank
 copyright:    2021 Andrew U. Frank
-category:     Algebra, Uniform
-synopsis:     pointless functions and a simplistic zero and monoid
+category:     Algebra Uniform
+synopsis:     Pointless functions and a simplistic zero and monoid
 description: |
-    simple algebras avoiding too much mathematical underpinning
+    Simple algebras avoiding too much mathematical underpinning
+
     - zero with test isZero, notZero (not a semigroupoid)
           exports also Maybe and Either
-    - pointless operations, e.g. tuples up to 4 or 5    
+
+    - pointless operations, e.g. tuples up to 4 or 5  
+      
     - ListForms (a monoid)
 
     Please see the README on GitHub at <https://github.com/andrewufrank/uniform-algebras/readme>
