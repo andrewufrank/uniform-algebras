@@ -16,7 +16,7 @@ module Uniform.Zero
   ( module Uniform.Zero,
     module Data.Maybe,
     module Data.Either,
-    module GHC.Generics,
+    -- module GHC.Generics,
   )
 where
 
