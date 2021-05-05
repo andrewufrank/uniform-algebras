@@ -11,10 +11,11 @@
 
 module Uniform.ListForm
   ( module Uniform.ListForm,
+    module Uniform.Zero 
   )
 where
 
-import Uniform.Zero
+import Uniform.Zero ( Zeros )
 
 class (Monoid l, Zeros (LF l)) => ListForms l where
   type LF l
