@@ -26,6 +26,8 @@ extra-source-files:
 
 dependencies:
 - base >= 4.7 && < 5
+- numeric-prelude
+- test-invariant
 
 library:
   source-dirs: 
