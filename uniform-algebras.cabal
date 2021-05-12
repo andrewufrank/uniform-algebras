@@ -7,7 +7,7 @@ cabal-version: 2.2
 -- hash: d5063147a590e342c7a089d4c99da9a156918b76b109cb499cfe5b0d26b3e716
 
 name:           uniform-algebras
-version:        0.1.0
+version:        0.1.1
 synopsis:       Pointless functions and a simplistic zero and monoid
 description:    Simple algebras avoiding too much mathematical underpinning
                 .
