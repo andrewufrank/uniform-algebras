@@ -4,7 +4,7 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 27d81d049ce41635c45b8f0ce43002f297bdfbb7a67ab3b79af4c971d34c9474
+-- hash: dc98329abf5718f8d41deb508741ac6c133c08333cafe2afe3727b9522aa4b54
 
 name:           uniform-algebras
 version:        0.1.2
@@ -42,7 +42,7 @@ library
   hs-source-dirs:
       ./
   build-depends:
-      base
+      base >4.7 && <5
     , numeric-prelude
     , test-invariant
   default-language: Haskell2010
