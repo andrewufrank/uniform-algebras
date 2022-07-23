@@ -1,13 +1,13 @@
 cabal-version: 2.2
 
--- This file has been generated from package.yaml by hpack version 0.34.6.
+-- This file has been generated from package.yaml by hpack version 0.35.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: dc98329abf5718f8d41deb508741ac6c133c08333cafe2afe3727b9522aa4b54
+-- hash: f0777aca04edb42c7a8ef82729989bbfc57a7be3f3f5814f580d7abec55a396e
 
 name:           uniform-algebras
-version:        0.1.2
+version:        0.1.3
 synopsis:       Pointless functions and a simplistic zero and monoid
 description:    Simple algebras avoiding too much mathematical underpinning
                 .
@@ -17,6 +17,8 @@ description:    Simple algebras avoiding too much mathematical underpinning
                 - pointless operations, e.g. tuples up to 4 or 5  
                 .
                 - ListForms (a monoid)
+                .
+                v 0.1.3: added stack build lts 19.16 for ghc 9.0.2
                 .
                 Please see the README on GitHub at <https://github.com/andrewufrank/uniform-algebras/readme>
 category:       Algebra Uniform
