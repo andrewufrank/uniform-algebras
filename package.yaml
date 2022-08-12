@@ -1,5 +1,5 @@
 name:         uniform-algebras
-version:      0.1.3
+version:      0.1.4.1
 license:      GPL-2.0-only
 maintainer:   Andrew U. Frank <uniform@gerastree.at>
 bug-reports:  https://github.com/andrewufrank/uniform-algebras/issues
@@ -13,12 +13,10 @@ description: |
     - zero with test isZero, notZero (not a semigroupoid)
           exports also Maybe and Either
 
-    - pointless operations, e.g. tuples up to 4 or 5  
+    - pointless operations, e.g. tuples up to 4 or 5, imported from Algebra of Programming (AOP) prelude  
       
     - ListForms (a monoid)
 
-    v 0.1.3: added stack build lts 19.16 for ghc 9.0.2
-    
     Please see the README on GitHub at <https://github.com/andrewufrank/uniform-algebras/readme>
 
 extra-source-files:
@@ -27,6 +25,8 @@ extra-source-files:
 
 dependencies:
 - base > 4.7 && < 5
+- aop-prelude 
+- extra
 - numeric-prelude
 - test-invariant
 

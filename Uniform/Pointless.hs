@@ -1,87 +1,60 @@
 ---------------------------------------------------------------------
 --
 -- Module      :  Uniform.Pointless
---              collecting some of the operations used in
---              the book by
+--              collecting some of the operations for a 
+--              pointless (pairs based) programming style  
+--              demonstrated in the book by
 --              Bird \& deMoore \"The Algebra of Programming\"
+--          which is available from hackage 
+--         https://hackage.haskell.org/package/aop-prelude-0.4.1.1 
 ----------------------------------------------------------------------
 
-module Uniform.Pointless (module Uniform.Pointless) where
+module Uniform.Pointless (module Uniform.Pointless
+                    , module AOPPrelude
+                    ) where
 
-pair :: (t -> b) -> (t, t) -> (b, b)
-pair f (a, b) = (f a, f b)
 
-cross :: (t1 -> a, t2 -> b) -> (t1, t2) -> (a, b)
-cross (f, g) (a, b) = (f a, g b)
+import AOPPrelude (outl, outr, swap, assocl, assocr, dupl
+    , pair, cross, cond )
+-- code copied from aop-prelude (partial)
+    
+-- const :: a -> b -> a
+-- const k a = k
+-- id :: a -> a
+-- id a      = a
+
+-- outl :: (a, b) -> a
+-- outl (a, _) = a
+-- outr :: (a, b) -> b
+-- outr (_, b) = b
+-- swap :: (a, b) -> (b, a)
+-- swap (a, b) = (b, a)
+
+-- assocl :: (a, (b, c)) -> ((a, b), c)
+-- assocl (a, (b, c)) = ((a, b), c)
+-- assocr :: ((a, b), c) -> (a, (b, c))
+-- assocr ((a, b), c) = (a, (b, c))
+
+-- dupl :: (a, (b, c)) -> ((a, b), (a, c))
+-- dupl (a, (b, c)) = ((a, b), (a, c))
+-- dupr :: ((a, b), c) -> ((a, c), (b, c))
+-- dupr ((a, b), c) = ((a, c), (b, c))
+
+-- pair :: (a -> b, a -> c) -> a -> (b, c)
+-- pair (f, g) a       = (f a, g a)
+-- cross :: (a -> c, b -> d) -> (a, b) -> (c, d)
+-- cross (f, g) (a, b) = (f a, g b)
+-- cond :: (a -> Bool) -> (a -> b, a -> b) -> a -> b
+-- cond p (f, g) a     = if p a then f a else g a
+
+-- curry :: ((a, b) -> c) -> a -> b -> c
+-- curry f a b      = f (a, b)
+-- uncurry :: (a -> b -> c) -> (a, b) -> c
+-- uncurry f (a, b) = f a bpair :: (t -> b) -> (t, t) -> (b, b)
+
+-- my old different definitions (with prime):
+pair' f (a, b) = (f a, f b) -- replace wth both
 
 swapPair :: (b, a) -> (a, b)
 swapPair (a, b) = (b, a)
 
-first :: (t -> a) -> (t, b) -> (a, b)
-first f (a, b) = (f a, b)
-
-second :: (t -> b) -> (a, t) -> (a, b)
-second f (a, b) = (a, f b)
-
-fst3 :: (a, b, c) -> a
-fst3 (x, y, z) = x
-
-snd3 :: (a, b, c) -> b
-snd3 (x, y, z) = y
-
-trd3 :: (a, b, c) -> c
-trd3 (x, y, z) = z
-
-fst4 :: (a, b, c, d) -> a
-fst4 (x, y, z, w) = x
-
-snd4 :: (a, b, c, d) -> b
-snd4 (x, y, z, w) = y
-
-trd4 :: (a, b, c, d) -> c
-trd4 (x, y, z, w) = z
-
-thd4 :: (a, b, c, d) -> c
-thd4 = trd4
-
-fth4 :: (a, b, c, d) -> d
-fth4 (x, y, z, w) = w
-
-fst5 :: (a, b, c, d, e) -> a
-fst5 (x, y, z, w, u) = x
-
-snd5 :: (a, b, c, d, e) -> b
-snd5 (x, y, z, w, u) = y
-
-thd5 :: (a, b, c, d, e) -> c
-thd5 (x, y, z, w, u) = z
-
-trd5 :: (a, b, c, d, e) -> c
-trd5 = thd5
-
-fth5 :: (a, b, c, d, e) -> d
-fth5 (x, y, z, w, u) = w
-
-ffh5 :: (a, b, c, d, e) -> e
-ffh5 (x, y, z, w, u) = u
-
-first3 :: (a1 -> b) -> (a1, a2, a3) -> (b, a2, a3)
-first3 f (a1, a2, a3) = (f a1, a2, a3)
-
-second3 :: (a2 -> b) -> (a1, a2, a3) -> (a1, b, a3)
-second3 f (a1, a2, a3) = (a1, f a2, a3)
-
-third3 :: (a3 -> b) -> (a1, a2, a3) -> (a1, a2, b)
-third3 f (a1, a2, a3) = (a1, a2, f a3)
-
-first4 :: (a1 -> b) -> (a1, a2, a3, a4) -> (b, a2, a3, a4)
-first4 f (a1, a2, a3, a4) = (f a1, a2, a3, a4)
-
-second4 :: (a2 -> b) -> (a1, a2, a3, a4) -> (a1, b, a3, a4)
-second4 f (a1, a2, a3, a4) = (a1, f a2, a3, a4)
-
-third4 :: (a3 -> b) -> (a1, a2, a3, a4) -> (a1, a2, b, a4)
-third4 f (a1, a2, a3, a4) = (a1, a2, f a3, a4)
-
-fourth4 :: (a4 -> b) -> (a1, a2, a3, a4) -> (a1, a2, a3, b)
-fourth4 f (a1, a2, a3, a4) = (a1, a2, a3, f a4)
