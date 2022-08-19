@@ -4,10 +4,10 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 338b7eabd3afa3260c0e146d44d96d821d10860780b5bbb1b74b5e4c620fc438
+-- hash: b2d1e1860094f42c3c07dcdf8bd41530a4cd96ec24d747e3c3a4417b6d32549f
 
 name:           uniform-algebras
-version:        0.1.4.1
+version:        0.1.4.2
 synopsis:       Pointless functions and a simplistic zero and monoid
 description:    Simple algebras avoiding too much mathematical underpinning
                 .

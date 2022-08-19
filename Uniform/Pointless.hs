@@ -53,8 +53,15 @@ import AOPPrelude (outl, outr, swap, assocl, assocr, dupl
 -- uncurry f (a, b) = f a bpair :: (t -> b) -> (t, t) -> (b, b)
 
 -- my old different definitions (with prime):
-pair' f (a, b) = (f a, f b) -- replace wth both
+
+pair' :: (a->b) -> (a,a) -> (b,b)
+pair' f (a, b) = (f a, f b) 
+-- ^ replace wth both
 
 swapPair :: (b, a) -> (a, b)
+-- | replace with swap
 swapPair (a, b) = (b, a)
 
+dup :: b -> (b, b)
+-- make a pair from a value
+dup a = (a,a)
