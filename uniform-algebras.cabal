@@ -4,7 +4,7 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b2d1e1860094f42c3c07dcdf8bd41530a4cd96ec24d747e3c3a4417b6d32549f
+-- hash: 2080972c9d311cd43e9185bc849443f8fceabf679ffe006999ce7c83fc017d19
 
 name:           uniform-algebras
 version:        0.1.4.2
@@ -43,8 +43,7 @@ library
   hs-source-dirs:
       ./
   build-depends:
-      aop-prelude
-    , base >4.7 && <5
+      base >4.7 && <5
     , extra
     , numeric-prelude
     , test-invariant

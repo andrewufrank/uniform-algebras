@@ -25,7 +25,7 @@ extra-source-files:
 
 dependencies:
 - base > 4.7 && < 5
-- aop-prelude 
+# - aop-prelude 
 - extra
 - numeric-prelude
 - test-invariant
