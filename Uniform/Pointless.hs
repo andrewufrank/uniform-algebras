@@ -18,10 +18,11 @@ module Uniform.Pointless (module Uniform.Pointless
 --     , pair, cross, cond )
 -- code copied from aop-prelude (partial)
     
-const :: a -> b -> a
-const k a = k
-id :: a -> a
-id a      = a
+-- const :: a -> b -> a
+-- const k a = k
+-- id :: a -> a
+-- id a      = a
+-- id and const are imported from regular prelude
 
 outl :: (a, b) -> a
 outl (a, _) = a
