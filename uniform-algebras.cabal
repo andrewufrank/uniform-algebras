@@ -1,13 +1,13 @@
 cabal-version: 2.2
 
--- This file has been generated from package.yaml by hpack version 0.35.0.
+-- This file has been generated from package.yaml by hpack version 0.35.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2080972c9d311cd43e9185bc849443f8fceabf679ffe006999ce7c83fc017d19
+-- hash: 7e7d657a86bb30abee958cff325ed816b9d8fa46c2e423e11231f40d420e2cff
 
 name:           uniform-algebras
-version:        0.1.4.2
+version:        0.1.5.1
 synopsis:       Pointless functions and a simplistic zero and monoid
 description:    Simple algebras avoiding too much mathematical underpinning
                 .

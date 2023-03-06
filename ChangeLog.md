@@ -9,3 +9,6 @@
     aligning with the function names from algebra of programming (import)
     import tuples from extra (to reduce duplications)
     removed aopPrelude (because not in 9.2.5)
+
+0.1.5 branch for ghc 9.2.5
+0.1.5.1
